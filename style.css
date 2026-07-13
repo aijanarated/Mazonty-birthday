@@ -134,3 +134,58 @@ body{
     background:#95ff74;
 
 }
+/* ================= SPAWN ================= */
+
+#spawn{
+    display:none;
+
+    height:100vh;
+
+    background:linear-gradient(#69b84f,#87ceeb);
+
+    color:white;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+}
+
+#spawn h1{
+
+    font-size:2rem;
+
+    text-shadow:4px 4px black;
+
+}
+
+.welcome{
+
+    width:70%;
+
+    font-size:15px;
+
+    line-height:2;
+
+}
+
+#start-adventure{
+
+    padding:20px 40px;
+
+    font-family:'Press Start 2P';
+
+    cursor:pointer;
+
+    background:#7ec850;
+
+    border:4px solid #2d5d25;
+
+}
