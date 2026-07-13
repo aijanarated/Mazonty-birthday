@@ -240,3 +240,77 @@ color:#3a2a18;
 white-space:pre-line;
 
 }
+/* ================= BOOK & QUILL ================= */
+
+#book{
+    background: linear-gradient(to bottom,#8BC34A,#689F38);
+    padding:100px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+#book h2{
+    color:white;
+    text-shadow:4px 4px black;
+    margin-bottom:40px;
+}
+
+.minecraft-book{
+    background:#f7e7b6;
+    width:90%;
+    max-width:750px;
+    min-height:420px;
+    border:8px solid #5e4322;
+    border-radius:10px;
+    padding:40px;
+    box-shadow:0 15px 30px rgba(0,0,0,.4);
+    position:relative;
+}
+
+.page{
+    display:none;
+    animation:fade .5s;
+}
+
+.page.active{
+    display:block;
+}
+
+.page h3{
+    color:#5a3d19;
+    margin-bottom:20px;
+}
+
+.page p{
+    color:#3b2a18;
+    line-height:2;
+    font-size:18px;
+}
+
+#nextPage{
+    margin-top:35px;
+    padding:15px 25px;
+    font-family:'Press Start 2P', cursive;
+    background:#7EC850;
+    border:4px solid #2e5c24;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#nextPage:hover{
+    transform:scale(1.05);
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateX(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
