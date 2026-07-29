@@ -19,50 +19,27 @@
 </head>
 
 <body>
+<canvas id="gameCanvas"></canvas>
 
-<div id="loading">
-  <h1>Generating MazenCraft World...</h1>
-  <div class="bar">
-    <div id="progress"></div>
-  </div>
-  <p id="percent">0%</p>
-</div>
+<div id="hud">
+  <div id="crosshair">+</div>
 
-<div id="game">
-  <h1 class="title">⛏️ MAZENCRAFT ⛏️</h1>
-
-  <div class="world">
-    <div class="block grass"></div>
-    <div class="block dirt"></div>
-    <div class="chest">🎁</div>
+  <div id="stats">
+    ❤️❤️❤️❤️❤️
+    🍗🍗🍗🍗🍗
   </div>
 
-  <button onclick="openChest()">Open Chest</button>
-
-  <p id="message"></p>
+  <div id="hotbar">
+    🟫 🪵 💎 🎁 🗡️
+  </div>
 </div>
 
-<script>
-let progress = 0;
+<div id="start">
+  <h1>MAZENCRAFT</h1>
+  <button onclick="startGame()">PLAY</button>
+</div>
 
-let timer = setInterval(()=>{
- progress += 10;
- document.getElementById("progress").style.width = progress+"%";
- document.getElementById("percent").innerHTML = progress+"%";
-
- if(progress >= 100){
-   clearInterval(timer);
-   document.getElementById("loading").style.display="none";
-   document.getElementById("game").style.display="block";
- }
-},300);
-
-function openChest(){
- document.getElementById("message").innerHTML =
- "🎂 Happy Birthday Mazen! Welcome to your world ❤️";
-}
-</script>
-
+<script src="game.js"></script>
 </body>
 
 </html>
