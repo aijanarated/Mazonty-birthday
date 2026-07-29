@@ -174,5 +174,79 @@ function animate(){
 }
 
 
+function addTree(x,z){
 
+  // trunk
+  let trunk = new THREE.Mesh(
+    new THREE.BoxGeometry(0.8,3,0.😎,
+    new THREE.MeshLambertMaterial({
+      color:0x7a4a22
+    })
+  );
+
+  trunk.position.set(x,0.5,z);
+  scene.add(trunk);
+
+
+  // leaves
+  let leaves = new THREE.Mesh(
+    new THREE.SphereGeometry(2,8,8),
+    new THREE.MeshLambertMaterial({
+      color:0x2f7d32
+    })
+  );
+
+  leaves.position.set(x,2.5,z);
+  scene.add(leaves);
+
+}
+
+
+
+function addCastle(){
+
+  // castle body
+  let castle = new THREE.Mesh(
+    new THREE.BoxGeometry(6,5,4),
+    new THREE.MeshLambertMaterial({
+      color:0x888888
+    })
+  );
+
+  castle.position.set(0,1.5,-12);
+  scene.add(castle);
+
+
+
+  // tower
+  let tower = new THREE.Mesh(
+    new THREE.CylinderGeometry(1,1,8,6),
+    new THREE.MeshLambertMaterial({
+      color:0x777777
+    })
+  );
+
+  tower.position.set(3,3,-12);
+  scene.add(tower);
+
+
+  // glowing entrance
+  let door = new THREE.Mesh(
+    new THREE.BoxGeometry(1,2,0.2),
+    new THREE.MeshBasicMaterial({
+      color:0xffcc55
+    })
+  );
+
+  door.position.set(0,-0.5,-14.1);
+  scene.add(door);
+
+}
 createWorld();
+
+addTree(-6,-3);
+addTree(6,-2);
+addTree(-10,-8);
+addTree(10,-7);
+
+addCastle();
