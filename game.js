@@ -1,4 +1,4 @@
-alert("MazenCraft updated");let scene, camera, renderer;
+let scene, camera, renderer;
 let clouds = [];
 
 
@@ -242,6 +242,7 @@ function addCastle(){
   scene.add(door);
 
 }
+
 createWorld();
 
 addTree(-6,-3);
