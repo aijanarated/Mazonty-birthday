@@ -1,87 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>MAZENCRAFT | A Birthday Adventure</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-<!-- Loading Screen -->
-
-<div id="loading-screen">
-
-    <div class="loading-box">
-
-        <h1>MAZENCRAFT</h1>
-
-        <p id="loading-text">
-            Generating Birthday World...
-        </p>
-
-        <div class="loading-bar">
-
-            <div id="loading-fill"></div>
-
-        </div>
-
-    </div>
-
+<div id="loading">
+  <h1>Generating MazenCraft World...</h1>
+  <div class="bar">
+    <div id="progress"></div>
+  </div>
+  <p id="percent">0%</p>
 </div>
 
-<!-- Main Menu -->
+<div id="game">
+  <h1 class="title">⛏️ MAZENCRAFT ⛏️</h1>
 
-<section id="menu">
+  <div class="world">
+    <div class="block grass"></div>
+    <div class="block dirt"></div>
+    <div class="chest">🎁</div>
+  </div>
 
-    <div class="sky">
+  <button onclick="openChest()">Open Chest</button>
 
-        <div class="cloud c1"></div>
-        <div class="cloud c2"></div>
-        <div class="cloud c3"></div>
+  <p id="message"></p>
+</div>
 
-    </div>
+<script>
+let progress = 0;
 
-    <div class="menu-box">
+let timer = setInterval(()=>{
+ progress += 10;
+ document.getElementById("progress").style.width = progress+"%";
+ document.getElementById("percent").innerHTML = progress+"%";
 
-        <h1 class="logo">
-            MAZENCRAFT
-        </h1>
+ if(progress >= 100){
+   clearInterval(timer);
+   document.getElementById("loading").style.display="none";
+   document.getElementById("game").style.display="block";
+ }
+},300);
 
-        <p class="subtitle">
-            A Birthday Adventure
-        </p>
-
-        <button id="playButton">
-            Enter Birthday World
-        </button>
-
-        <button id="musicButton">
-            Music: OFF
-        </button>
-
-        <p class="version">
-            Version 1.0
-        </p>
-
-    </div>
-
-</section>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+function openChest(){
+ document.getElementById("message").innerHTML =
+ "🎂 Happy Birthday Mazen! Welcome to your world ❤️";
+}
+</script>
