@@ -1,4 +1,4 @@
-let scene, camera, renderer;
+alert("MazenCraft updated");let scene, camera, renderer;
 let clouds = [];
 
 
