@@ -1,59 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>MAZENCRAFT | A Birthday Adventure</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+  <title>MazenCraft</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<div id="menu">
+
+  <div id="logo">
+    MAZENCRAFT
+    <small>A Birthday Adventure</small>
+  </div>
+
+  <button id="play">PLAY</button>
+
+</div>
+
+
 <canvas id="gameCanvas"></canvas>
 
-<div id="hud">
-  <div id="crosshair">+</div>
 
- <div id="stats">
-  <div class="hearts">
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-
-  <div class="food">
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-</div>
-
-
-<div id="hotbar">
-  <div class="slot"></div>
-  <div class="slot"></div>
-  <div class="slot"></div>
-  <div class="slot"></div>
-  <div class="slot"></div>
-  <div class="slot selected"></div>
-  <div class="slot"></div>
-  <div class="slot"></div>
-  <div class="slot"></div>
-</div>
-</div>
-
-<div id="start">
-  <h1>MAZENCRAFT</h1>
-  <button onclick="startGame()">PLAY</button>
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="game.js"></script>
-</body>
 
+</body>
 </html>
